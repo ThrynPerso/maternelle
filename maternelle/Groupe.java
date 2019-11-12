@@ -119,4 +119,34 @@ public class Groupe {
 		chaine += "</Groupe>\n";
 		return chaine;
 	}
+	
+	public void gerer () {
+		int choix = 0;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println("_____ MENU GROUPE _____");
+			System.out.println("1 - Saisie infos groupe");
+			System.out.println("2 - Afficher groupe ");
+			System.out.println("3 - Ajouter un enfant" );
+			System.out.println("4 - Lister les enfants ");
+			System.out.println("5 - Rechercher un enfant ");
+			System.out.println("6 - Supprimer un enfant ");
+			System.out.println("7 - To String ");
+			System.out.println("8 - To XML ");
+			System.out.println("0 - Quitter ");
+			System.out.println("Votre Choix -->");
+			choix = sc.nextInt();
+			switch (choix) {
+			case 1 : this.saisir();break;
+			case 2 : this.afficher();break;
+			case 3 : this.ajouterEnfant();break;
+			case 4 : this.listerEnfants();break;
+			case 5 : this.rechercherEnfant();break;
+			case 6 : this.supprimerEnfant();break;
+			case 7 : System.out.println("To string : " +this.toString());break;
+			case 8 : System.out.println("To XML : " +this.toXml());break;
+			}
+		}while(choix != 0);
+		sc.close();
+	}
 }
