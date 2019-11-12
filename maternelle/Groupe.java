@@ -48,7 +48,27 @@ public class Groupe {
 	public void listerEnfants () {
 		// pour chaque enfant dans tous les enfants
 		for (Enfant unEnfant : this.lesEnfants) {
-			
+			unEnfant.afficher();
 		}
+	}
+	
+	public void rechercherEnfant () {
+		int code;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Donner le code de l'enfant :");
+		code = sc.nextInt();
+		boolean trouve = false;
+		for (Enfant unEnfant : this.lesEnfants) {
+			if (unEnfant.getCode() == code) {
+				System.out.println("Enfant trouvé :");
+				unEnfant.afficher();
+				trouve = true;
+				break; // on casse la boucle : fini
+			}
+		}
+		if (trouve == false) {
+			System.out.println("Pas d'enfant avec ce code trouvé");
+		}
+		sc.close();
 	}
 }
