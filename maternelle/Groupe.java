@@ -102,4 +102,21 @@ public class Groupe {
 		}
 		return chaine;
 	}
+	
+	public String toXml () 
+	{
+		String chaine = "";
+		chaine += "<Groupe>\n";
+		chaine += "\t<nom>" +this.nom +"</nom>\n";
+		chaine += "\t<couleur>" +this.couleur +"</libelle>\n";
+		chaine += this.laMaitresse.toXml();
+		chaine += this.leNiveau.toXml();
+		chaine += "<liste>\n";
+		for (Enfant unEnfant : this.lesEnfants) {
+			chaine += unEnfant.toXml();
+		}
+		chaine += "</liste>\n";
+		chaine += "</Groupe>\n";
+		return chaine;
+	}
 }
