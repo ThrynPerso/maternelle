@@ -31,7 +31,7 @@ public class NiveauEtudes {
 		String chaine = "";
 		chaine += "<NiveauEtudes>\n";
 		chaine += "\t<code>" +this.code +"</code>\n";
-		chaine += "\t<libelle>" +this.libelle +"</libelle\n";
+		chaine += "\t<libelle>" +this.libelle +"</libelle>\n";
 		chaine += "</NiveauEtudes>\n";
 		return chaine;
 	}
