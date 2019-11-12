@@ -149,4 +149,46 @@ public class Groupe {
 		}while(choix != 0);
 		sc.close();
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getCouleur() {
+		return couleur;
+	}
+
+	public void setCouleur(String couleur) {
+		this.couleur = couleur;
+	}
+
+	public Maitresse getLaMaitresse() {
+		return laMaitresse;
+	}
+
+	public void setLaMaitresse(Maitresse laMaitresse) {
+		this.laMaitresse = laMaitresse;
+	}
+
+	public NiveauEtudes getLeNiveau() {
+		return leNiveau;
+	}
+
+	public void setLeNiveau(NiveauEtudes leNiveau) {
+		this.leNiveau = leNiveau;
+	}
+
+	public ArrayList<Enfant> getLesEnfants() {
+		return lesEnfants;
+	}
+
+	public void setLesEnfants(ArrayList<Enfant> lesEnfants) {
+		this.lesEnfants = lesEnfants;
+	}
+	
+	
 }
