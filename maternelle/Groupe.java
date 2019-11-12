@@ -91,4 +91,15 @@ public class Groupe {
 		}
 		sc.close();
 	}
+	
+	public String toString () {
+		String chaine = "";
+		chaine = this.nom +";" + this.couleur +";";
+		chaine += this.laMaitresse.toString() + ";";
+		chaine += this.leNiveau.toString() + ";";
+		for (Enfant unEnfant : this.lesEnfants) {
+			chaine += unEnfant.toString() + ";" ;
+		}
+		return chaine;
+	}
 }
