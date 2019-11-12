@@ -25,6 +25,10 @@ public class Groupe {
 		this.nom = sc.next();
 		System.out.println("La couleur du groupe :");
 		this.couleur = sc.next();
+		System.out.println("Infos Maîtresse :");
+		this.laMaitresse.saisir();
+		System.out.println("Infos Niveau d'études :");
+		this.leNiveau.saisir();
 		sc.close();
 	}
 	
@@ -147,7 +151,6 @@ public class Groupe {
 			case 8 : System.out.println("To XML : " +this.toXml());break;
 			}
 		}while(choix != 0);
-		sc.close();
 	}
 
 	public String getNom() {
