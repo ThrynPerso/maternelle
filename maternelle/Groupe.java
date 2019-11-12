@@ -71,4 +71,24 @@ public class Groupe {
 		}
 		sc.close();
 	}
+	
+	public void supprimerEnfant() { 
+		int code;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Donner le code de l'enfant :");
+		code = sc.nextInt();
+		boolean trouve = false;
+		for (Enfant unEnfant : this.lesEnfants) {
+			if (unEnfant.getCode() == code) {
+				this.lesEnfants.remove(unEnfant);
+				System.out.println("Enfant trouvé et supprimé");
+				trouve = true;
+				break; // on casse la boucle : fini
+			}
+		}
+		if (trouve == false) {
+			System.out.println("Pas d'enfant avec ce code trouvé");
+		}
+		sc.close();
+	}
 }
