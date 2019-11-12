@@ -35,6 +35,10 @@ public class Groupe {
 	public void afficher() {
 		System.out.println("Le nom : "+this.nom);
 		System.out.println("La couleur : "+this.couleur);
+		System.out.println("La Maîtresse : ");
+		this.laMaitresse.afficher();
+		System.out.println("Le niveau : ");
+		this.leNiveau.afficher();
 	}
 	
 	public void ajouterEnfant () {
@@ -126,7 +130,6 @@ public class Groupe {
 	
 	public void gerer () {
 		int choix = 0;
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println("_____ MENU GROUPE _____");
 			System.out.println("1 - Saisie infos groupe");
@@ -139,7 +142,7 @@ public class Groupe {
 			System.out.println("8 - To XML ");
 			System.out.println("0 - Quitter ");
 			System.out.println("Votre Choix -->");
-			choix = sc.nextInt();
+			choix = Console.saisirInt();
 			switch (choix) {
 			case 1 : this.saisir();break;
 			case 2 : this.afficher();break;

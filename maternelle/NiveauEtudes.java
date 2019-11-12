@@ -14,7 +14,7 @@ public class NiveauEtudes {
 	public void saisir () {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Le code :");
-		this.code = sc.nextInt();
+		this.code = Console.saisirInt();
 		System.out.println("Le libelle :");
 		this.libelle = sc.next();
 		sc.close();
